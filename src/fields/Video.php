@@ -129,8 +129,6 @@ class Video extends Field
 
                 $video = new \plcdnl\videos\models\Video();
                 $video->url = $videoUrl;
-                $video->addError('url', Craft::t('videos', 'Unable to find the video.'));
-
                 return $video;
             }
         } catch (\Exception $exception) {
