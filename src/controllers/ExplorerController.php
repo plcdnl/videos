@@ -94,7 +94,9 @@ class ExplorerController extends Controller
         $video = Plugin::getInstance()->getVideos()->getVideoByUrl($url);
 
         if ($video === null) {
-            return $this->asErrorJson(Craft::t('videos', 'Unable to find the video.'));
+            // TODO: Implement error handling
+            // return $this->asErrorJson(Craft::t('videos', 'Unable to find the video.'));
+            return;
         }
 
         $videoArray = VideosHelper::videoToArray($video);
